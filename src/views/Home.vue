@@ -1,18 +1,37 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <FilterBar :type="'Genre'" :items="random"/>
 </template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
 export default {
-  name: "home",
+  name: "Home",
   components: {
-    HelloWorld
+    FilterBar: () => import("@/components/FilterBar")
+  },
+  data() {
+    return {
+      random: [
+        "acres",
+        "finally",
+        "favorite",
+        "quarter",
+        "rest",
+        "printed",
+        "fat",
+        "ruler",
+        "air",
+        "rule",
+        "twenty",
+        "environment",
+        "center",
+        "pleasure",
+        "zero",
+        "wire",
+        "cause",
+        "deeply",
+        "most",
+        "snake"
+      ]
+    };
   }
 };
 </script>
