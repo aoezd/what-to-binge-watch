@@ -1,37 +1,25 @@
 <template>
-  <FilterBar :type="'Genre'" :items="random"/>
+  <div>
+    <v-tabs grow>
+      <v-tab ripple>New</v-tab>
+      <v-tab ripple>Popular</v-tab>
+      <v-tabs-items>
+        <v-tab-item>
+          <NewTitlesView/>
+        </v-tab-item>
+        <v-tab-item>
+          <PopularTitlesView/>
+        </v-tab-item>
+      </v-tabs-items>
+    </v-tabs>
+  </div>
 </template>
 <script>
 export default {
   name: "Home",
   components: {
-    FilterBar: () => import("@/components/FilterBar")
-  },
-  data() {
-    return {
-      random: [
-        "acres",
-        "finally",
-        "favorite",
-        "quarter",
-        "rest",
-        "printed",
-        "fat",
-        "ruler",
-        "air",
-        "rule",
-        "twenty",
-        "environment",
-        "center",
-        "pleasure",
-        "zero",
-        "wire",
-        "cause",
-        "deeply",
-        "most",
-        "snake"
-      ]
-    };
+    NewTitlesView: () => import("@/views/NewTitlesView"),
+    PopularTitlesView: () => import("@/views/PopularTitlesView")
   }
 };
 </script>

@@ -14,11 +14,6 @@ export default {
   components: {
     Drawer: () => import("@/components/core/Drawer"),
     Toolbar: () => import("@/components/core/Toolbar")
-  },
-  data() {
-    return {
-      //
-    };
   }
 };
 </script>
