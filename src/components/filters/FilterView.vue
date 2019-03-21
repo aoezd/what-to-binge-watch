@@ -41,7 +41,7 @@ import {
 } from "@/store/modules/filters/types";
 
 export default {
-  name: "Filters",
+  name: "FilterView",
   components: {
     FilterChips: () => import("./FilterChips")
   },
